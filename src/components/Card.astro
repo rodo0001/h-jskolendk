@@ -1,0 +1,32 @@
+---
+const { cardimage = "", cardimagealt = "", bynavn = "", pris = "", badgefaapladser = "" } = Astro.props;
+---
+
+<article class="relative rounded cursor-pointer overflow-hidden w-[350px] h-[426px] @container">
+  <!-- Badge -->
+  {
+    badgefaapladser === "true" && (
+      <div class="absolute z-20 top-2 right-2 inline-flex items-center rounded bg-orange-200 px-2 py-1 text-xs font-medium text-orange-700 ring-1 ring-inset ring-orange-600/10 ">
+        <img src="fire.png" alt="icon" class="pr-1" />
+        Få pladser tilbage
+      </div>
+    )
+  }
+
+  <!-- Billedet -->
+  <div class="relative w-full h-full group">
+    <img src={cardimage} alt={cardimagealt} class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-100" />
+
+    <!-- Baggrundsfarve og tekst -->
+    <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center pt-7xl p-sm transition-all duration-500 group-hover:bg-opacity-0 group-hover:opacity-0">
+      <div class="border-2 border-white">
+        <div class="py-sm px-s text-center">
+          <h3 class="text-xlarge font-semibold text-white transition-opacity duration-500 group-hover:opacity-0">{bynavn}</h3>
+        </div>
+        <div class="flex justify-center">
+          <p class="text-sm text-center text-white transition-opacity duration-500 group-hover:opacity-0">{pris}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
