@@ -103,6 +103,8 @@ export default {
         2: "2px",
         3: "3px",
         4: "4px",
+        5: "5px",
+        10: "10px",
       },
       borderRadius: {
         DEFAULT: "24px",

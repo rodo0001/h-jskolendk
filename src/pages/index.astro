@@ -19,62 +19,58 @@ import Pil from "./public/pil.png";
 ---
 
 <MainLayout title="Højskolendk">
-  <section class="relative h-screen overflow-hidden" id="herovideo">
-	
-	<header class="z-20 relative">
-		<Header/>
-	</header>
-	<div>
-    <video class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover z-10" autoplay muted loop>
-      <source src="hero2.webm" type="video/webm" />
-
-    </video>
-	</div>
-	<div class="relative z-20">
-		<section class="max-w-4xl mx-auto min-h-screen flex items-center justify-center">	
-			<div class="">
-<h2 class="flex justify-center text-white lg:pb-xxs">FÆLLESSKAB, SJOVT OG LÆRERIGT</h2>
-		<h1 class=" text-white lg:text-5xl ">FÅ DIT LIVS EVENTYR I ULANDET MED <span class="lg:text-8xl lg:pb-xxs flex justify-center text-white "> HØJSKOLENDK</span> </h1>
-			</div>
-			<div class="animate-bounce">
-      <Image src={Pil} alt="billede" class="" />
+   <section class="relative h-screen overflow-hidden" id="herovideo">
+    <header class="z-20 relative">
+      <Header />
+    </header>
+    <div>
+      <video class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover z-10" autoplay muted loop>
+        <source src="hero2.webm" type="video/webm" />
+      </video>
     </div>
-			
-</section>
-		
-	</div>
+    <div class="relative z-20">
+      <section class="max-w-4xl mx-auto min-h-screen flex flex-col items-center justify-center text-center">
+        <div class="mb-8">
+          <!-- Tilføjet margin-bottom -->
+          <h2 class="text-white text-lg lg:pb-2">FÆLLESSKAB, SJOVT OG LÆRERIGT</h2>
+          <h1 class="text-white lg:text-5xl">
+            FÅ DIT LIVS EVENTYR I ULANDET MED
+            <span class="lg:text-8xl lg:pb-2 block text-white">HØJSKOLENDK</span>
+          </h1>
+        </div>
+        <a href="#overskrift">
+          <div class="animate-bounce flex justify-center">
+            <Image src={Pil} alt="billede" class="w-12" />
+          </div>
+        </a>
+      </section>
+    </div>
+  </section>
+
+  <section class="pt-16 pb-16 lg:pt-5xl lg:pb-16 max-w-[1300px] m-auto" id="overskrift">
+    <div class="lg:grid lg:grid-cols-[1fr,auto]">
+      <div class="pb-xl">
+        <h2 class="pb-xs font-bold text-xlarge text-orange-900 lg:pb-sm">
+          ER DU KLAR TIL DIT LIVS <br />EVENTYR?
+        </h2>
+        <p>HØJSKOLENDK er en dansk højskole for unge i alderen ca. 18-30 år. Vi brænder for oplevelser, fællesskab og mødet med nye mennesker og kulturer; derfor laver vi eventyrlige højskoleophold i udlandet. HØJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet og er vild med højskolefællesskab, vil med på et fantastisk rejseeventyr, glæder dig til at lære om fremmede kulturer, vil rejse med rygsæk, drømmer om en fed grupperejse med andre skønne unge, vil opleve et stærkt sammenhold og ønsker inspirerende og meningsfuld undervisning. Du er sikker på en tryg rejseoplevelse da vi er medlem af Rejsegarantifonden.</p>
+        <div class="lg:grid lg:grid-cols-2">
+          <p class="pt-10">Vi glæder os til at lære dig at kende!</p>
+          <Button variant="primary" size="medium" href="#ophold">Vælg dit eventyr!</Button>
+        </div>
+      </div>
+      <div class="pb-xl lg:w-96">
+        <Image src={Hawaii} alt="billede" class="rounded" />
+      </div>
+    </div>
   </section>
 
 
 
-  <section class="pt-16 pb-16 lg:pt-5xl lg:pb-16 max-w-[1300px] m-auto">
-  <div class="lg:grid lg:grid-cols-[1fr,auto]">
-    <div class="pb-xl ">
-      <h2 class="pb-xs font-bold text-xlarge text-orange-900 lg:pb-sm">
-        ER DU KLAR TIL DIT LIVS <br />EVENTYR?
-      </h2>
-      <p>
-        HØJSKOLENDK er en dansk højskole for unge i alderen ca. 18-30 år. Vi
-        brænder for oplevelser, fællesskab og mødet med nye mennesker og
-        kulturer; derfor laver vi eventyrlige højskoleophold i udlandet.
-        HØJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet og er
-        vild med højskolefællesskab, vil med på et fantastisk rejseeventyr,
-        glæder dig til at lære om fremmede kulturer, vil rejse med rygsæk,
-        drømmer om en fed grupperejse med andre skønne unge, vil opleve et
-        stærkt sammenhold og ønsker inspirerende og meningsfuld undervisning.
-        Du er sikker på en tryg rejseoplevelse da vi er medlem af
-        Rejsegarantifonden.
-      </p>
-     <div class="lg:grid lg:grid-cols-2">
-          <p class="pt-10">Vi glæder os til at lære dig at kende!</p>
-          <Button variant="primary" size="medium">Vælg dit eventyr!</Button>
-        </div>
-    </div>
-    <div class="pb-xl lg:w-96 "> 
-      <Image src={Hawaii} alt="billede" class="rounded" />
-    </div>
-  </div>
-</section>
+
+
+ 
+
 
   <section class="bg-orange-900 pt-16 pb-16 lg:pb-16 lg:pt-5xl">
     <div class=" lg:grid lg:grid-cols-2 lg:gap-24 lg:mx-2xl max-w-[1300px] m-auto">
@@ -101,7 +97,7 @@ import Pil from "./public/pil.png";
   <section class="">
     <Image src={Trustpilot} alt="billede" />
   </section>
-  <section class="pt-16 pb-16 lg:pt-5xl lg:pb-16">
+  <section class="pt-16 pb-16 lg:pt-5xl lg:pb-16" id="ophold">
     <div>
       <h2 class="pb-sm text-xl font-bold text-orange-900 flex justify-center lg:text-xlarge">HØJSKOLE I UDLANDET - VÆLG DIT EVENTYR!</h2>
     </div>
@@ -143,8 +139,8 @@ import Pil from "./public/pil.png";
     </div>
   </section>
 
-  <section class="bg-[#fcefe6] pt-16 pb-16 p-6 lg:pt-5xl lg:pb-16 max-w-[1300px] m-auto">
-    <div class="grid lg:grid-cols-[auto,1fr]">
+ <section class="bg-[#fcefe6] pt-16 pb-16 p-6 lg:pt-5xl lg:pb-16 max-w-[1300px] m-auto">
+    <div class="grid lg:grid-cols-[auto,1fr] gap-10">
       <!-- Kolonne 1: Billeder og Video -->
       <div class="pb-m grid grid-cols-2">
         <!-- Venstre side: Billeder -->
@@ -168,13 +164,13 @@ import Pil from "./public/pil.png";
           Hvis du er afklaret og klar på <strong>højskoleeventyr</strong>, er det bare med at <a href="#" class="text-orange-600 underline">tilmelde dig</a>. Der bliver nemlig udsolgt på langt de fleste af vores ophold.
         </p>
         <div class="flex gap-4 mt-6">
-          <button class="bg-orange-500 text-white font-bold py-2 px-6 rounded hover:bg-orange-600"> Giv mig besked &rsaquo;</button>
+          <button class="border-2 border-orange-500 font-bold text-orange-500 py-2 px-6 rounded hover:bg-orange-200"> Giv mig besked &rsaquo;</button>
           <button class="bg-orange-500 text-white font-bold py-2 px-6 rounded hover:bg-orange-600"> Tilmeld dig ophold &rsaquo;</button>
         </div>
       </div>
     </div>
   </section>
-  <section class="bg-beige-500 pt-16 pb-16 lg:pt-5xl lg:pb-16 ">
+  <section class="bg-beige-500 pt-16 pb-16 lg:pt-5xl lg:pb-16 " id="form">
     <div class="lg:grid lg:grid-cols-[1fr,auto] lg:mx-xl lg:gap-40 max-w-[1300px] m-auto">
       <div class="mx-xs">
         <h2 class="font-bold text-xlarge pb-xs">DELTAG I VORES <br />INFOMØDER!</h2>
@@ -197,6 +193,14 @@ import Pil from "./public/pil.png";
         <Image src={Cykeltur} alt="billede" class="rounded w-72" />
       </div>
     </div>
+  </section>
+   <section class="pt-16 pb-16 lg:pt-5xl lg:pb-16">
+    <Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“VERDENS BEDSTE OPLEVELSE”" stjerner="/public/stjerner.png" navn="SUSANNE K. PEDERSEN"/>
+	<Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“VERDENS BEDSTE OPLEVELSE”" stjerner="/public/stjerner.png" navn="SUSANNE K. PEDERSEN"/>
+	<Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“VERDENS BEDSTE OPLEVELSE”" stjerner="/public/stjerner.png" navn="SUSANNE K. PEDERSEN"/>
+	<Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“VERDENS BEDSTE OPLEVELSE”" stjerner="/public/stjerner.png" navn="SUSANNE K. PEDERSEN"/>
+	<Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“VERDENS BEDSTE OPLEVELSE”" stjerner="/public/stjerner.png" navn="SUSANNE K. PEDERSEN"/>
+	<Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“VERDENS BEDSTE OPLEVELSE”" stjerner="/public/stjerner.png" navn="SUSANNE K. PEDERSEN"/>
   </section>
   <section class="pt-16 pb-16 lg:pt-7xl lg:pb-7xl">
     <Image src={Skoven} alt="billede" />
@@ -224,7 +228,10 @@ import Pil from "./public/pil.png";
       <Card2 iconimage="/public/icon4.png" overskrift="TEAMBUILDING" tekst="Hvorfor tage et kedeligt kursus i Danmark, når du kan rejse ud i verden og udvikle dig? Sammen med andre unge voksne lærer du om samarbejde, relationer, fællesskab og stærke teams - samtidig får du værdifulde erfaringer til både CV, studie og karriere." />
     </div>
   </section>
-  <section class="pt-16 pb-16 lg:pt-5xl lg:pb-16">
-    <Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“VERDENS BEDSTE OPLEVELSE”" stjerner="/public/stjerner.png" navn="SUSANNE K. PEDERSEN"/>
-  </section>
+ 
 </MainLayout>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
