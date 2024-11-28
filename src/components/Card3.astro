@@ -1,0 +1,30 @@
+---
+const { logoimage = "", logoalt = "", citat = "", stjerner = "", stjerneralt = "", navn = "" } = Astro.props;
+---
+
+<article class="relative rounded cursor-pointer overflow-hidden w-[350px] h-[426px] @container mx-xl">
+
+  <div class="relative w-full h-full group ">
+    <div class="absolute z-20 w-lg h-large top-2 right-2 inline-flex items-left">
+ <img src={logoimage} alt={logoalt} class="w-full h-full object-cover " />
+
+    </div>
+   
+    <!-- Baggrundsfarve og tekst -->
+    <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center pt-7xl p-sm >
+      <div class="border-2 border-white">
+        <div class="py-sm px-s text-center">
+          <p class="text-xlarge font-semibold text-white ">{citat}</p>
+        </div>
+        <div class="flex justify-center">
+          <img src={stjerner} alt={stjerneralt} class="w-full h-full object-cover " />
+        </div>
+        <div>
+          <p>
+            {navn}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

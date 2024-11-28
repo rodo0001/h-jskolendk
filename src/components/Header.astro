@@ -1,14 +1,15 @@
 ---
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import logo from "../public/images/logo.png";
+import logo from "../public/logo.png";
 ---
 
-<div x-data="{ showmenu: false }" class="text-black p-4 lg:static w-full relative z-50 bg-white shadow">
+<div x-data="{ showmenu: false }" class="text-white p-4 lg:static w-full">
   <div id="navbar" class="flex flex-row justify-between">
     <div id="logo" class="hover:opacity-75 w-16 sm:w-20 md:w-24 lg:w-32 max-w-full">
       <a href="/">
-        <!-- <Image src={logo} alt="logo" /> -->
+        <img src="/public/logo.png" alt="logo" class="w-full h-full object-cover " />
+
       </a>
     </div>
     <nav id="desktopmenu" class="hidden lg:flex flex-1 justify-end">

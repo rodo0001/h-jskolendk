@@ -1,5 +1,23 @@
 ---
+const { variant = "primary", size = "medium", href = "#", target = "_self" } = Astro.props;
+
+const buttonStylingprimary = "text-white cursor-pointer font-bold hover:bg-orange-700 ";
+// const buttonStylingsecondary = "border-2 text-orange-500 cursor-pointer font-bold hover:bg-orange-200 ";
+const variantClasses = {
+  primary: "bg-orange-500 rounded lg:p-3",
+  secondary: "rounded lg:p-3",
+};
+
+const sizeClasses = {
+  large: "px-8 py-2 text-xl",
+  medium: "px-6 py-1 text-lg",
+  small: "px-2 py-0.5 text-sm",
+};
 ---
-<div>
-    <button class="border-2 border-black"><slot /></button>
+
+<div class="flex justify-center items-center pt-16 lg:p-8 pulse-effect">
+  <!-- <button class="bg-[#FF6F61] text-white p-4 rounded-2xl cursor-pointer font-bold">
+    <slot />
+  </button> -->
+  <a href={href} class:list={[buttonStylingprimary, variantClasses[variant], sizeClasses[size]]} target={target}><slot /></a>
 </div>

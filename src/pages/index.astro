@@ -3,6 +3,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import Card from "../components/Card.astro";
+import Card2 from "../components/Card2.astro";
+import Card3 from "../components/Card3.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 import hero from "/hero2.webm";
@@ -12,29 +14,70 @@ import Footer from "./public/footer.png";
 import Skoven from "./public/skoven.png";
 import Kbh from "./public/kbh.png";
 import Cykeltur from "./public/cykeltur.jpg";
+import Header from "../components/Header.astro";
+import Pil from "./public/pil.png";
 ---
 
 <MainLayout title="Højskolendk">
-  <section class="relative h-screen overflow-hidden -mt-6" id="herovideo">
+  <section class="relative h-screen overflow-hidden" id="herovideo">
+	
+	<header class="z-20 relative">
+		<Header/>
+	</header>
+	<div>
     <video class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover z-10" autoplay muted loop>
       <source src="hero2.webm" type="video/webm" />
+
     </video>
-  </section>
-  <section class="pt-16 pb-16 lg:pt-5xl lg:pb-16">
-    <div class="lg:grid lg:grid-cols-2">
-      <div class="mx-xs pb-xl lg:mx-xl">
-        <h2 class="pb-xs font-bold text-xlarge text-orange-900 lg:pb-sm">ER DU KLAR TIL DIT LIVS <br />EVENTYR?</h2>
-        <p>HØJSKOLENDK er en dansk højskole for unge i alderen ca. 18-30 år. Vi brænder for oplevelser, fællesskab og mødet med nye mennesker og kulturer; derfor laver vi eventyrlige højskoleophold i udlandet. HØJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet og er vild med højskolefællesskab, vil med på et fantastisk rejseeventyr, glæder dig til at lære om fremmede kulturer, vil rejse med rygsæk, drømmer om en fed grupperejse med andre skønne unge, vil opleve et stærkt sammenhold og ønsker inspirerende og meningsfuld undervisning. Du er sikker på en tryg rejseoplevelse da vi er medlem af Rejsegarantifonden.</p>
-        <p class="pt-4">Vi glæder os til at lære dig at kende!</p>
-      </div>
-      <div class="mx-xs pb-xl lg:w-96">
-        <Image src={Hawaii} alt="billede" class="rounded" />
-      </div>
+	</div>
+	<div class="relative z-20">
+		<section class="max-w-4xl mx-auto min-h-screen flex items-center justify-center">	
+			<div class="">
+<h2 class="flex justify-center text-white lg:pb-xxs">FÆLLESSKAB, SJOVT OG LÆRERIGT</h2>
+		<h1 class=" text-white lg:text-5xl ">FÅ DIT LIVS EVENTYR I ULANDET MED <span class="lg:text-8xl lg:pb-xxs flex justify-center text-white "> HØJSKOLENDK</span> </h1>
+			</div>
+			<div class="animate-bounce">
+      <Image src={Pil} alt="billede" class="" />
     </div>
+			
+</section>
+		
+	</div>
   </section>
 
+
+
+  <section class="pt-16 pb-16 lg:pt-5xl lg:pb-16 max-w-[1300px] m-auto">
+  <div class="lg:grid lg:grid-cols-[1fr,auto]">
+    <div class="pb-xl ">
+      <h2 class="pb-xs font-bold text-xlarge text-orange-900 lg:pb-sm">
+        ER DU KLAR TIL DIT LIVS <br />EVENTYR?
+      </h2>
+      <p>
+        HØJSKOLENDK er en dansk højskole for unge i alderen ca. 18-30 år. Vi
+        brænder for oplevelser, fællesskab og mødet med nye mennesker og
+        kulturer; derfor laver vi eventyrlige højskoleophold i udlandet.
+        HØJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet og er
+        vild med højskolefællesskab, vil med på et fantastisk rejseeventyr,
+        glæder dig til at lære om fremmede kulturer, vil rejse med rygsæk,
+        drømmer om en fed grupperejse med andre skønne unge, vil opleve et
+        stærkt sammenhold og ønsker inspirerende og meningsfuld undervisning.
+        Du er sikker på en tryg rejseoplevelse da vi er medlem af
+        Rejsegarantifonden.
+      </p>
+     <div class="lg:grid lg:grid-cols-2">
+          <p class="pt-10">Vi glæder os til at lære dig at kende!</p>
+          <Button variant="primary" size="medium">Vælg dit eventyr!</Button>
+        </div>
+    </div>
+    <div class="pb-xl lg:w-96 "> 
+      <Image src={Hawaii} alt="billede" class="rounded" />
+    </div>
+  </div>
+</section>
+
   <section class="bg-orange-900 pt-16 pb-16 lg:pb-16 lg:pt-5xl">
-    <div class="mx-xs lg:grid lg:grid-cols-2 lg:gap-24 lg:mx-2xl">
+    <div class=" lg:grid lg:grid-cols-2 lg:gap-24 lg:mx-2xl max-w-[1300px] m-auto">
       <div>
         <h3 class="text-white pb-xs font-bold text-large">REJSE HØJSKOLE</h3>
         <p class="text-white pb-20">
@@ -63,7 +106,7 @@ import Cykeltur from "./public/cykeltur.jpg";
       <h2 class="pb-sm text-xl font-bold text-orange-900 flex justify-center lg:text-xlarge">HØJSKOLE I UDLANDET - VÆLG DIT EVENTYR!</h2>
     </div>
 
-    <div class="lg:grid lg:grid-cols-3 gap-xs">
+    <div class="lg:grid lg:grid-cols-3 gap-xs place-items-center max-w-[1300px] m-auto">
       <div class="text-small font-bold mt-sm">
         <Card cardimage="/public/pigerpaatog.jpg" cardimagealt="3 piger der er på et tog" bynavn="New York, Caribien, Hawaii & Mexico" pris="FRA 67.900 DKK" badgefaapladser="true" />
       </div>
@@ -100,8 +143,8 @@ import Cykeltur from "./public/cykeltur.jpg";
     </div>
   </section>
 
-  <section class="bg-[#fcefe6] pt-16 pb-16 p-6 lg:pt-5xl lg:pb-16">
-    <div class="grid lg:grid-cols-2">
+  <section class="bg-[#fcefe6] pt-16 pb-16 p-6 lg:pt-5xl lg:pb-16 max-w-[1300px] m-auto">
+    <div class="grid lg:grid-cols-[auto,1fr]">
       <!-- Kolonne 1: Billeder og Video -->
       <div class="pb-m grid grid-cols-2">
         <!-- Venstre side: Billeder -->
@@ -131,22 +174,35 @@ import Cykeltur from "./public/cykeltur.jpg";
       </div>
     </div>
   </section>
-  <section class="bg-beige-500 pt-16 pb-16 lg:pt-5xl lg:pb-16">
-    <div class="lg:grid lg:grid-cols-2 lg:mx-xl lg:gap-40">
+  <section class="bg-beige-500 pt-16 pb-16 lg:pt-5xl lg:pb-16 ">
+    <div class="lg:grid lg:grid-cols-[1fr,auto] lg:mx-xl lg:gap-40 max-w-[1300px] m-auto">
       <div class="mx-xs">
         <h2 class="font-bold text-xlarge pb-xs">DELTAG I VORES <br />INFOMØDER!</h2>
         <p class="pb-xs">Hvis du drømmer om et fantastisk rejseeventyr med masser af adventure, vilde naturoplevelser og spændende kulturmøder så smut forbi et af vores hyggelige infomøder i København eller Aarhus - eller mød os på et online infomøde.</p>
+		<div class="">
+          <form class="w-full max-w-sm pt-2">
+            <div class="mb-4">
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-2 text-orange-900">Navn</label>
+              <input type="text" id="name" name="name" placeholder="Skriv dit navn" required class="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white" />
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2 text-orange-900">Email</label>
+              <input type="email" id="email" name="email" placeholder="Skriv din email" required class="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white" />
+            </div>
+            <Button variant="primary" size="medium">Tilmeld infomøde</Button>
+          </form>
+        </div>
       </div>
       <div class="mx-xs pt-xs">
         <Image src={Cykeltur} alt="billede" class="rounded w-72" />
       </div>
     </div>
   </section>
-  <section class="pt-16 pb-16 lg:pt-5xl lg:pb-16">
+  <section class="pt-16 pb-16 lg:pt-7xl lg:pb-7xl">
     <Image src={Skoven} alt="billede" />
   </section>
-  <section class="bg-beige-500 pt-16 pb-16 lg:pt-5xl lg:pb-16">
-    <div class="mx-xs lg:grid lg:grid-cols-2 lg:gap-12 lg:mx-xl">
+  <section class="bg-beige-500 pt-16 pb-16 lg:pt-5xl lg:pb-16 ">
+    <div class="mx-xs lg:grid lg:grid-cols-2 lg:gap-12 lg:mx-xl  max-w-[1300px] m-auto ">
       <div>
         <h3 class="text-orange-900 pb-xs font-bold text-large">HØJSKOLE I UDLANDET FOR UNGE MENNESKER</h3>
         <p class="pb-20">Drømmer du om et højskoleophold i udlandet? Med HÖJSKOLENDK får du dit livs eventyr med fællesskab, unikke oplevelser og meningsfuld læring. Oplev nye venskaber, spændende kulturer og uforglemmelige øjeblikke, der vil styrke dig som person. Rejs til Bali, Hawaii, Australien eller New York, Tokyo og Rio de Janeiro. Udforsk autentiske møder i Indien og Mexico eller adrenalinfyldte eventyr i New Zealand og Costa Rica. Med danske rejseledere og unge på din egen alder bliver det en rejse, du aldrig glemmer - både ud i verden og ind i dig selv.</p>
@@ -156,5 +212,19 @@ import Cykeltur from "./public/cykeltur.jpg";
         <p>HØJSKOLENDK tilbyder spændende højskoleophold i udlandet, både i sommerferien og resten af året. Sommerophold varer typisk 5 uger og kombinerer flere lande og kulturer – perfekt for dig, der vil udforske verden, møde andre unge og udvikle dig, inden studier eller job. Årsophold varer 2-3 måneder og er ideelt til sabbatåret, hvor du kan rejse og styrke dig selv personligt. Uanset hvornår du rejser, garanterer vi et uforglemmeligt eventyr med fællesskab og oplevelser for livet!</p>
       </div>
     </div>
+  </section>
+  <section class="pt-16 pb-16 lg:pt-7xl lg:pb-7xl  max-w-[1300px] m-auto">
+    <h3 class="text-orange-900 font-bold  text-xlarge pb-sm flex justify-center">EN REJSE HØJSKOLE FYLDT MED OPLEVELSER</h3>
+    <div class="lg:grid lg:grid-cols-4 gap-xs place-items-center">
+      <Card2 iconimage="/public/icon1.png" overskrift="KULTUROPLEVELSER" tekst="Kultur er en essentiel del af at opleve et nyt land. Det giver spændende møder, oplevelser og en indsigt, du ikke finder i bøger eller rejseprogrammer. På vores højskolerejser kan du udforske alt fra hindu-templer i Indien og surfkultur på Hawaii til mayaruiner i Guatemala, buddhisme i Thailand." />
+      <Card2 iconimage="/public/icon2.png" overskrift="FRIVILLIGT ARBEJDE" tekst="Drømmer du om frivilligt arbejde i udlandet? På mange af vores højskolerejser arbejder vi tæt med de lokale, hvilket giver dig en unik indsigt i landets større forståelse for kulturen og måden man lever på i de forskellige lande." />
+
+      <Card2 iconimage="/public/icon3.png" overskrift="VILDE NATUROPLEVELSER" tekst="Ingen rejse uden vilde naturoplevelser! Vores højskoleophold fører dig til destinationer med enestående natur, fra snorkling i Caribien og river rafting i Thailand til trekking i Himalaya, safari i Sri Lanka og dykning med manta rays på Hawaii. Uanset hvor du rejser, venter uforglemmelige eventyr." />
+
+      <Card2 iconimage="/public/icon4.png" overskrift="TEAMBUILDING" tekst="Hvorfor tage et kedeligt kursus i Danmark, når du kan rejse ud i verden og udvikle dig? Sammen med andre unge voksne lærer du om samarbejde, relationer, fællesskab og stærke teams - samtidig får du værdifulde erfaringer til både CV, studie og karriere." />
+    </div>
+  </section>
+  <section class="pt-16 pb-16 lg:pt-5xl lg:pb-16">
+    <Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“VERDENS BEDSTE OPLEVELSE”" stjerner="/public/stjerner.png" navn="SUSANNE K. PEDERSEN"/>
   </section>
 </MainLayout>

@@ -123,4 +123,14 @@ export default {
     },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
+
+  keyframes: {
+    bounce: {
+      "0%, 100%": { transform: "translateY(-10px)", animationTimingFunction: "ease-in-out" },
+      "50%": { transform: "translateY(0)", animationTimingFunction: "ease-in-out" },
+    },
+  },
+  animation: {
+    bounce: "bounce 1s infinite",
+  },
 };
