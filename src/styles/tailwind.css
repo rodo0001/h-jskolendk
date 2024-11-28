@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    /* p{
+@layer base {
+  /* p{
         @apply text-body;
+    
     } */
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 }

@@ -35,6 +35,7 @@ export default {
         100: "rgba(251, 249, 247, 1)",
         50: "rgba(254, 252, 251, 1)",
       },
+      lightbeige: "#FFEEE5",
       white: "#fff",
       black: "#000",
     },
