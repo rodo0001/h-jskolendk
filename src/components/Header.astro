@@ -1,6 +1,44 @@
 ---
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import logo from "../public/images/logo.png";
 ---
-<div class="max-w-screen-xl mx-auto text-white">
-    Header/Navigation
+
+<div x-data="{ showmenu: false }" class="text-black p-4 lg:static w-full relative z-50 bg-white shadow">
+  <div id="navbar" class="flex flex-row justify-between">
+    <div id="logo" class="hover:opacity-75 w-16 sm:w-20 md:w-24 lg:w-32 max-w-full">
+      <a href="/">
+        <!-- <Image src={logo} alt="logo" /> -->
+      </a>
+    </div>
+    <nav id="desktopmenu" class="hidden lg:flex flex-1 justify-end">
+      <ul class="flex flex-row gap-8 pr-8">
+        <li class="hover:opacity-75"><a href="#Hvaderplastikforurening">Højskoleophold</a></li>
+        <li class="hover:opacity-75"><a href="#Problemetmedplastikforurening">Priser</a></li>
+      </ul>
+      <div>
+        <Link variant="primary" size="medium" href="#form">Tilmeld infomøde</Link>
+      </div>
+    </nav>
+
+    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">
+      <template x-if="!showmenu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"></path>
+        </svg>
+      </template>
+      <template x-if="showmenu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </template>
+    </button>
+  </div>
+
+  <nav id="mobilmenu" class="fixed right-0 w-full flex flex-col items-center pt-4 bg-blue lg:hidden" x-show="showmenu" x-transition x-cloak>
+    <ul class="text-center space-y-4">
+      <li class="hover:opacity-75"><a href="registrer">Højskoleophold</a></li>
+      <li class="hover:opacity-75"><a href="ressourcer">Priser</a></li>
+    </ul>
+  </nav>
 </div>
-    

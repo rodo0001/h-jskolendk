@@ -5,8 +5,113 @@ import Link from "../components/Link.astro";
 import Card from "../components/Card.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import hero from "/hero2.webm";
+import Hawaii from "./public/hawaii.jpg";
 ---
 
 <MainLayout title="Højskolendk">
-  <article class="max-w-screen-xl mx-auto"></article>
+  <section class="relative h-screen overflow-hidden -mt-6" id="herovideo">
+    <video class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover z-10" autoplay muted loop>
+      <source src="hero2.webm" type="video/webm" />
+    </video>
+  </section>
+  <section>
+    <div class="lg:grid lg:grid-cols-2">
+      <div class="mx-xs pb-xl lg:mx-xl">
+        <h2 class="pb-xs font-bold text-xlarge text-orange-900 lg:pb-sm">ER DU KLAR TIL DIT LIVS <br />EVENTYR?</h2>
+        <p>HØJSKOLENDK er en dansk højskole for unge i alderen ca. 18-30 år. Vi brænder for oplevelser, fællesskab og mødet med nye mennesker og kulturer; derfor laver vi eventyrlige højskoleophold i udlandet. HØJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet og er vild med højskolefællesskab, vil med på et fantastisk rejseeventyr, glæder dig til at lære om fremmede kulturer, vil rejse med rygsæk, drømmer om en fed grupperejse med andre skønne unge, vil opleve et stærkt sammenhold og ønsker inspirerende og meningsfuld undervisning. Du er sikker på en tryg rejseoplevelse da vi er medlem af Rejsegarantifonden.</p>
+        <p class="pt-4">Vi glæder os til at lære dig at kende!</p>
+      </div>
+      <div class="mx-xs pb-xl lg:w-96">
+        <Image src={Hawaii} alt="billede" class="rounded" />
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-orange-900 pt-16 pb-16">
+    <div class="mx-xs lg:grid lg:grid-cols-2 lg:gap-24 lg:mx-2xl">
+      <div>
+        <h3 class="text-white pb-xs font-bold text-large">REJSE HØJSKOLE</h3>
+        <p class="text-white pb-20">
+          Der venter dig et unikt rejseeventyr når du tager på højskole i udlandet, med et stærkt sammenhold og fede rejseoplevelser. Med udgangspunkt i højskolens to grundværdier fællesskab og dannelse, kan du på højskole i udlandet bruge din sabbatår rejse på fx frivilligt arbejde, vilde adventure- og naturoplevelser, lære sprog og spændende personlig udvikling der giver dig mere selvtillid, selvindsigt og selvværd. Glæd dig også til inspirerende undervisning, der levende og aktivt forener det lærende med det legende. Vores elever beskriver HØJSKOLENDK som ”eventyrlige dannelsesrejser med noget på hjerte”. Udover det fantastiske rejseeventyr handler vores højskoleophold i udlandet om dine drømme, mål og ønsker for livet. På inspirerende og aktiv vis flytter du dine grænser og bliver en
+          endnu stærkere udgave af dig selv. Vi tror på, at du kommer hjem med mere mod på alt hvad livet byder dig og er mere afklaret omkring hvad en meningsfuld fremtid er for dig. Tag på højskole i udlandet hvis du har du lyst til at opleve verden, udleve dine rejsedrømme i et skønt fællesskab, blive inspireret af dygtige og engagerede undervisere og få et eventyr for livet.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-white pb-xs font-bold text-large">HØJSKOLEOPHOLD I UDLANDET</h3>
+        <p class="text-white">- Når du rejser på højskole i udlandet med HØJSKOLENDK…</p>
+        <p class="text-white">- Bliver du en del af et fantastisk fællesskab med et stærkt sammenhold</p>
+        <p class="text-white">- Får du masser af vilde naturoplevelser, adventure og spændende kulturmøder</p>
+        <p class="text-white">- Opdager du nye og stærke sider af dig selv, flytter grænser og får mere selvtillid</p>
+        <p class="text-white">- Rejser du altid med danske passionerede rejseledere og engagerede undervisere</p>
+        <p class="text-white pb-10">- Får du et uforglemmeligt, unikt og trygt rejseeventyr for livet</p>
+        <p class="text-white">Med vores unikke kombination af højskole, grupperejser, rejseeventyr, frihed, kulturmøder og spændende undervisning, vil vi inspirere dig til at finde ind til hvad der er vigtigst for dig i livet - hvad du virkeligt brænder for og kan mærke er meningsfuldt - så du kan forfølge dine drømme. Gå på opdagelse her på siden efter dit livs eventyr - på højskole i udlandet med HØJSKOLENDK.</p>
+      </div>
+    </div>
+  </section>
+  <section class="grid grid-cols-3 gap-xs">
+    <div class="text-small font-bold mt-sm">
+      <Card cardimage="/public/pigerpaatog.jpg" cardimagealt="3 piger der er på et tog" bynavn="New York, Caribien, Hawaii & Mexico" pris="FRA 67.900 DKK" badgefaapladser="true" />
+    </div>
+
+    <div class="text-small font-bold mt-sm">
+      <Card cardimage="/public/hawaii.jpg" cardimagealt="hawaii" bynavn="Australien, New Zealand, Bali & Gili island" pris="FRA 64.900 DKK" badgefaapladser="true" />
+    </div>
+
+    <div class="text-small font-bold mt-sm">
+      <Card cardimage="/public/skydiving.jpg" cardimagealt="skydiving" bynavn="Costa Rica, Mexico & Colombia" pris="FRA 58.900 DKK" badgefaapladser="true" />
+    </div>
+
+    <div class="text-small font-bold mt-sm">
+      <Card cardimage="/public/vandfald.jpg" cardimagealt="vandfald" bynavn="Indien, Nepal,Thailand, Vietnam & Sri Lanka" pris="FRA 61.500 DKK" badgefaapladser="true" />
+    </div>
+
+    <div class="text-small font-bold mt-sm">
+      <Card cardimage="/public/japan.jpg" cardimagealt="japan" bynavn="Hawaii, Australien, Japan, Bali & Gili islands" pris="FRA 84.500 DKK" badgefaapladser="true" />
+    </div>
+
+    <div class="text-small font-bold mt-sm">
+      <Card cardimage="/public/maldiverne.jpg" cardimagealt="maldiverne" bynavn="Maldiverne, Sri Lanka, Bali & Gili islands" pris="FRA 52.500 DKK" badgefaapladser="true" />
+    </div>
+
+    <div class="text-small font-bold mt-sm">
+      <Card cardimage="/public/gruppebiledesol.jpg" cardimagealt="solopgang" bynavn="Brasilien, Bolivia, Colombia, Ecuador, Peru & Argentina" pris="FRA 74.900 DKK" badgefaapladser="true" />
+    </div>
+    <div class="text-small font-bold mt-sm">
+      <Card cardimage="/public/Australien .jpg" cardimagealt="3 piger der er på et tog" bynavn="Australien, Japan Bali & Gili Islands" pris="FRA 54.900 DKK" badgefaapladser="true" />
+    </div>
+    <div class="text-small font-bold mt-sm">
+      <Card cardimage="/public/mountainbike.jpg" cardimagealt="3 piger der er på et tog" bynavn="Bali, Lombok & Gili islands" pris="FRA 28.900 DKK" badgefaapladser="true" />
+    </div>
+  </section>
+
+  <section class="bg-[#fcefe6] p-6">
+    <div class="grid lg:grid-cols-2">
+      <!-- Kolonne 1: Billeder og Video -->
+      <div class="grid grid-cols-2">
+        <!-- Venstre side: Billeder -->
+        <div class="grid grid-rows-2">
+          <img src="solnedgang.jpg" alt="Billede 1" class="rounded-lg w-48 h-48 object-cover" />
+          <img src="toppenbjerg.jpg" alt="Billede 2" class="rounded-lg w-48 h-48 object-cover" />
+        </div>
+
+        <!-- Højre side: Video -->
+        <video class="rounded-lg w-7xl h-30 object-cover" controls src="oplevelsesvideo.webm" alt="Video"></video>
+      </div>
+
+      <!-- Kolonne 2: Tekst -->
+      <div class="text-[#3c2300]">
+        <h2 class="text-3xl font-bold">Tag det første skridt mod dit eventyr</h2>
+        <p class="mt-4 text-lg leading-relaxed">Skriv dig op til det eventyr, du drømmer om – det er gratis og helt uforpligtende. Ved at skrive dig op, får du besked som en af de første, før det bliver udsolgt. Du sikrer dig muligheden for at tage afsted på dit drømmeeventyr, uden skuffelsen af der er udsolgt. Drømme bliver til virkelighed for dem, der griber chancen – gør det i dag!</p>
+        <p class="mt-4">
+          Hvis du er afklaret og klar på <strong>højskoleeventyr</strong>, er det bare med at <a href="#" class="text-orange-600 underline">tilmelde dig</a>. Der bliver nemlig udsolgt på langt de fleste af vores ophold.
+        </p>
+        <div class="flex gap-4 mt-6">
+          <button class="bg-orange-500 text-white font-bold py-2 px-6 rounded hover:bg-orange-600"> Giv mig besked &rsaquo;</button>
+          <button class="bg-orange-500 text-white font-bold py-2 px-6 rounded hover:bg-orange-600"> Tilmeld dig ophold &rsaquo;</button>
+        </div>
+      </div>
+    </div>
+  </section>
 </MainLayout>
