@@ -8,13 +8,13 @@ import Card3 from "../components/Card3.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 import hero from "/hero2.webm";
-import Hawaii from "../assets/hawaii.jpg";
-import Trustpilot from "../assets/trustpilot.png";
-import footer from "../assets/footer.png";
-import Skoven from "../assets/skoven.png";
-import Cykeltur from "../assets/cykeltur.jpg";
+import Hawaii from "../assets/images/hawaii.jpg";
+import Trustpilot from "../assets/images/trustpilot.png";
+import Footer from "../assets/images/footer.png";
+import Skoven from "../assets/images/skoven.png";
+import Cykeltur from "../assets/images/cykeltur.jpg";
 import Header from "../components/Header.astro";
-import Pil from "../assets/pil.png";
+import Pil from "../assets/images/pil.png";
 ---
 
 <MainLayout title="Højskolendk">
@@ -32,9 +32,9 @@ import Pil from "../assets/pil.png";
         <div class="mb-8">
           <!-- Tilføjet margin-bottom -->
           <h2 class="text-white text-lg lg:pb-2">FÆLLESSKAB, SJOVT OG LÆRERIGT</h2>
-          <h1 class="text-white lg:text-5xl">
+          <h1 class="text-white text-2xl lg:text-3xl">
             FÅ DIT LIVS EVENTYR I ULANDET MED
-            <span class="lg:text-8xl lg:pb-2 block text-white">HØJSKOLENDK</span>
+            <span class=" text-4xl lg:text-8xl lg:pb-2 block text-white">HØJSKOLENDK</span>
           </h1>
         </div>
         <a href="#overskrift">
@@ -46,16 +46,21 @@ import Pil from "../assets/pil.png";
     </div>
   </section>
 
-  <section class="pt-16 pb-16 lg:pt-5xl lg:pb-16 max-w-[1300px] m-auto" id="overskrift">
-    <div class="lg:grid lg:grid-cols-[1fr,auto]">
+  
+  <section class="pt-16 pb-16 p-6 lg:pt-5xl lg:pb-16 max-w-[1300px] m-auto" id="overskrift">
+    <div class="lg:grid lg:grid-cols-[1fr,auto] gap-lg">
       <div class="pb-xl">
         <h2 class="pb-xs font-bold text-xlarge text-orange-900 lg:pb-sm">
           ER DU KLAR TIL DIT LIVS <br />EVENTYR?
         </h2>
-        <p>HØJSKOLENDK er en dansk højskole for unge i alderen ca. 18-30 år. Vi brænder for oplevelser, fællesskab og mødet med nye mennesker og kulturer; derfor laver vi eventyrlige højskoleophold i udlandet. HØJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet og er vild med højskolefællesskab, vil med på et fantastisk rejseeventyr, glæder dig til at lære om fremmede kulturer, vil rejse med rygsæk, drømmer om en fed grupperejse med andre skønne unge, vil opleve et stærkt sammenhold og ønsker inspirerende og meningsfuld undervisning. Du er sikker på en tryg rejseoplevelse da vi er medlem af Rejsegarantifonden.</p>
-        <div class="lg:grid lg:grid-cols-2">
+        <p>HØJSKOLENDK er en dansk højskole for unge i alderen ca. 18-30 år. Vi brænder for oplevelser, fællesskab og mødet med nye mennesker og kulturer; 
+			derfor laver vi eventyrlige højskoleophold i udlandet. HØJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet og 
+			er vild med højskolefællesskab, vil med på et fantastisk rejseeventyr, glæder dig til at lære om fremmede kulturer, 
+			vil rejse med rygsæk, drømmer om en fed grupperejse med andre skønne unge, vil opleve et stærkt sammenhold og ønsker 
+			inspirerende og meningsfuld undervisning. Du er sikker på en tryg rejseoplevelse da vi er medlem af Rejsegarantifonden.</p>
+        <div class="lg:flex ">
           <p class="pt-10">Vi glæder os til at lære dig at kende!</p>
-          <Button variant="primary" size="medium" href="#ophold">Vælg dit eventyr!</Button>
+          <Button variant="primary" size="medium" href="#ophold">Vælg dit eventyr! &rsaquo;</Button>
         </div>
       </div>
       <div class="pb-xl lg:w-96">
@@ -63,6 +68,9 @@ import Pil from "../assets/pil.png";
       </div>
     </div>
   </section>
+
+  
+  
 
 
 
@@ -72,7 +80,7 @@ import Pil from "../assets/pil.png";
 
 
   <section class="bg-orange-900 pt-16 pb-16 lg:pb-16 lg:pt-5xl">
-    <div class=" lg:grid lg:grid-cols-2 lg:gap-24 lg:mx-2xl max-w-[1300px] m-auto">
+    <div class=" lg:grid lg:grid-cols-2 lg:gap-24 lg:mx-2xl max-w-[1300px] m-auto mx-xs ">
       <div>
         <h3 class="text-white pb-xs font-bold text-large">REJSE HØJSKOLE</h3>
         <p class="text-white pb-20">
@@ -107,15 +115,15 @@ import Pil from "../assets/pil.png";
       </div>
 
       <div class="text-small font-bold mt-sm">
-        <Card cardimage="/public/hawaii.jpg" cardimagealt="hawaii" bynavn="Australien, New Zealand, Bali & Gili island" pris="FRA 64.900 DKK" badgefaapladser="true" />
+        <Card cardimage="/public/hawaii1.jpg" cardimagealt="hawaii" bynavn="Australien, New Zealand, Bali & Gili island" pris="FRA 64.900 DKK" badgefaapladser="false" />
       </div>
 
       <div class="text-small font-bold mt-sm">
-        <Card cardimage="/public/skydiving.jpg" cardimagealt="skydiving" bynavn="Costa Rica, Mexico & Colombia" pris="FRA 58.900 DKK" badgefaapladser="true" />
+        <Card cardimage="/public/skydiving.jpg" cardimagealt="skydiving" bynavn="Costa Rica, Mexico & Colombia" pris="FRA 58.900 DKK" badgefaapladser="false" />
       </div>
 
       <div class="text-small font-bold mt-sm">
-        <Card cardimage="/public/vandfald.jpg" cardimagealt="vandfald" bynavn="Indien, Nepal,Thailand, Vietnam & Sri Lanka" pris="FRA 61.500 DKK" badgefaapladser="true" />
+        <Card cardimage="/public/vandfald.jpg" cardimagealt="vandfald" bynavn="Indien, Nepal,Thailand, Vietnam & Sri Lanka" pris="FRA 61.500 DKK" badgefaapladser="false" />
       </div>
 
       <div class="text-small font-bold mt-sm">
@@ -123,14 +131,14 @@ import Pil from "../assets/pil.png";
       </div>
 
       <div class="text-small font-bold mt-sm">
-        <Card cardimage="/public/maldiverne.jpg" cardimagealt="maldiverne" bynavn="Maldiverne, Sri Lanka, Bali & Gili islands" pris="FRA 52.500 DKK" badgefaapladser="true" />
+        <Card cardimage="/public/maldiverne.jpg" cardimagealt="maldiverne" bynavn="Maldiverne, Sri Lanka, Bali & Gili islands" pris="FRA 52.500 DKK" badgefaapladser="false" />
       </div>
 
       <div class="text-small font-bold mt-sm">
-        <Card cardimage="/public/gruppebiledesol.jpg" cardimagealt="solopgang" bynavn="Brasilien, Bolivia, Colombia, Ecuador, Peru & Argentina" pris="FRA 74.900 DKK" badgefaapladser="true" />
+        <Card cardimage="/public/gruppebiledesol.jpg" cardimagealt="solopgang" bynavn="Brasilien, Bolivia, Colombia, Ecuador, Peru & Argentina" pris="FRA 74.900 DKK" badgefaapladser="false" />
       </div>
       <div class="text-small font-bold mt-sm">
-        <Card cardimage="/public/Australien .jpg" cardimagealt="3 piger der er på et tog" bynavn="Australien, Japan Bali & Gili Islands" pris="FRA 54.900 DKK" badgefaapladser="true" />
+        <Card cardimage="/public/Australien .jpg" cardimagealt="3 piger der er på et tog" bynavn="Australien, Japan Bali & Gili Islands" pris="FRA 54.900 DKK" badgefaapladser="false" />
       </div>
       <div class="text-small font-bold mt-sm">
         <Card cardimage="/public/mountainbike.jpg" cardimagealt="3 piger der er på et tog" bynavn="Bali, Lombok & Gili islands" pris="FRA 28.900 DKK" badgefaapladser="true" />
@@ -138,7 +146,7 @@ import Pil from "../assets/pil.png";
     </div>
   </section>
 
- <section class="bg-[#fcefe6] pt-16 pb-16 p-6 lg:pt-5xl lg:pb-16 max-w-[1300px] m-auto">
+ <section class=" pt-16 pb-16 p-6 lg:pt-5xl lg:pb-16 max-w-[1300px] m-auto">
     <div class="grid lg:grid-cols-[auto,1fr] gap-10">
       <!-- Kolonne 1: Billeder og Video -->
       <div class="pb-m grid grid-cols-2">
@@ -184,7 +192,7 @@ import Pil from "../assets/pil.png";
               <label for="email" class="block text-sm font-medium text-gray-700 mb-2 text-orange-900">Email</label>
               <input type="email" id="email" name="email" placeholder="Skriv din email" required class="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white" />
             </div>
-            <Button variant="primary" size="medium">Tilmeld infomøde</Button>
+            <Button variant="primary" size="medium">Tilmeld infomøde &rsaquo;</Button>
           </form>
         </div>
       </div>
@@ -193,15 +201,25 @@ import Pil from "../assets/pil.png";
       </div>
     </div>
   </section>
-   <section class="pt-16 pb-16 lg:pt-5xl lg:pb-16">
-    <Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“VERDENS BEDSTE OPLEVELSE”" stjerner="/public/stjerner.png" navn="SUSANNE K. PEDERSEN"/>
-	<Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“VERDENS BEDSTE OPLEVELSE”" stjerner="/public/stjerner.png" navn="SUSANNE K. PEDERSEN"/>
-	<Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“VERDENS BEDSTE OPLEVELSE”" stjerner="/public/stjerner.png" navn="SUSANNE K. PEDERSEN"/>
-	<Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“VERDENS BEDSTE OPLEVELSE”" stjerner="/public/stjerner.png" navn="SUSANNE K. PEDERSEN"/>
-	<Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“VERDENS BEDSTE OPLEVELSE”" stjerner="/public/stjerner.png" navn="SUSANNE K. PEDERSEN"/>
-	<Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“VERDENS BEDSTE OPLEVELSE”" stjerner="/public/stjerner.png" navn="SUSANNE K. PEDERSEN"/>
-  </section>
-  <section class="pt-16 pb-16 lg:pt-7xl lg:pb-7xl">
+
+    <section id="horisontalscrollsection" class="h-[500vw] flex flex-col pb-12">
+	<h2 class="pb-sm text-xl font-bold text-orange-900 flex justify-center lg:text-xlarge lg:pt-lg lg:pb-lg">ANMELDELSER FRA TIDLIGERE DELTAGERE</h2>
+      <ul id="horisontalliste" class="list-none pl-0 flex items-center sticky top-[30vh]">
+		
+        <li class="flex w-[100vw] items-center justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto">
+          <figure class="flex flex-row max-w-[800px]">
+            <Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“DET VAR SÅ FEDT AT REJSE MED HØJSKOLENDKE”" stjerner="/public/stjerner.png" navn="JACOB K. LAURIDSEN"/>
+          </figure>
+        </li>
+        <li class="flex w-[100vw] overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“VERDENS BEDSTE OPLEVELSE”" stjerner="/public/stjerner.png" navn="SUSANNE K. PEDERSEN"/></figure></li>
+        <li class="flex w-[100vw] overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“GØR DET! DU VIL ALDRIG FORTRYDE DET”" stjerner="/public/stjerner.png" navn="CASPER KRISTENSEN"/></figure></li>
+        <li class="flex w-[100vw] overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“MIT LIVE OPLEVELSE - FANTASTISKE”" stjerner="/public/stjerner.png" navn="SØREN SCHMIDT"/></figure></li>
+        <li class="flex w-[100vw] overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“ET AF DE VALG JEG ALDRIG VIL FORTRYDE”" stjerner="/public/stjerner.png" navn="CÆCILIE SAMS"/></figure></li>
+		<li class="flex w-[100vw] overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><figure class="flex flex-row max-w-[800px]"><Card3 logoimage="/public/logo.png" logoalt="iconer" citat="“EN FANTASTISK OG LÆRERIG OPLEVELSE”" stjerner="/public/stjerner.png" navn="BENJAMIN UHLEMANN"/></figure></li>
+      </ul>
+    </section>
+   
+  <section class=" pt-16 pb-16 lg:pt-7xl lg:pb-7xl">
     <Image src={Skoven} alt="billede" />
   </section>
   <section class="bg-beige-500 pt-16 pb-16 lg:pt-5xl lg:pb-16 ">
@@ -233,4 +251,13 @@ import Pil from "../assets/pil.png";
   html {
     scroll-behavior: smooth;
   }
-</style>
+  </style>
+  <script>
+  import { animate, stagger, inView, scroll, timeline } from "motion"; 
+   scroll(
+    animate("#horisontalliste", {
+      transform: ["none", "translateX(-400vw)"],
+    }),
+    { target: document.querySelector("#horisontalscrollsection") }
+  );
+</script>
