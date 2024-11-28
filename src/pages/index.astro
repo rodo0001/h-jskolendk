@@ -7,6 +7,11 @@ import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 import hero from "/hero2.webm";
 import Hawaii from "./public/hawaii.jpg";
+import Trustpilot from "./public/trustpilot.png";
+import Footer from "./public/footer.png";
+import Skoven from "./public/skoven.png";
+import Kbh from "./public/kbh.png";
+import Cykeltur from "./public/cykeltur.jpg";
 ---
 
 <MainLayout title="Højskolendk">
@@ -15,7 +20,7 @@ import Hawaii from "./public/hawaii.jpg";
       <source src="hero2.webm" type="video/webm" />
     </video>
   </section>
-  <section>
+  <section class="pt-16 pb-16 lg:pt-5xl lg:pb-16">
     <div class="lg:grid lg:grid-cols-2">
       <div class="mx-xs pb-xl lg:mx-xl">
         <h2 class="pb-xs font-bold text-xlarge text-orange-900 lg:pb-sm">ER DU KLAR TIL DIT LIVS <br />EVENTYR?</h2>
@@ -28,7 +33,7 @@ import Hawaii from "./public/hawaii.jpg";
     </div>
   </section>
 
-  <section class="bg-orange-900 pt-16 pb-16">
+  <section class="bg-orange-900 pt-16 pb-16 lg:pb-16 lg:pt-5xl">
     <div class="mx-xs lg:grid lg:grid-cols-2 lg:gap-24 lg:mx-2xl">
       <div>
         <h3 class="text-white pb-xs font-bold text-large">REJSE HØJSKOLE</h3>
@@ -50,46 +55,55 @@ import Hawaii from "./public/hawaii.jpg";
       </div>
     </div>
   </section>
-  <section class="grid grid-cols-3 gap-xs">
-    <div class="text-small font-bold mt-sm">
-      <Card cardimage="/public/pigerpaatog.jpg" cardimagealt="3 piger der er på et tog" bynavn="New York, Caribien, Hawaii & Mexico" pris="FRA 67.900 DKK" badgefaapladser="true" />
+  <section class="">
+    <Image src={Trustpilot} alt="billede" />
+  </section>
+  <section class="pt-16 pb-16 lg:pt-5xl lg:pb-16">
+    <div>
+      <h2 class="pb-sm text-xl font-bold text-orange-900 flex justify-center lg:text-xlarge">HØJSKOLE I UDLANDET - VÆLG DIT EVENTYR!</h2>
     </div>
 
-    <div class="text-small font-bold mt-sm">
-      <Card cardimage="/public/hawaii.jpg" cardimagealt="hawaii" bynavn="Australien, New Zealand, Bali & Gili island" pris="FRA 64.900 DKK" badgefaapladser="true" />
-    </div>
+    <div class="lg:grid lg:grid-cols-3 gap-xs">
+      <div class="text-small font-bold mt-sm">
+        <Card cardimage="/public/pigerpaatog.jpg" cardimagealt="3 piger der er på et tog" bynavn="New York, Caribien, Hawaii & Mexico" pris="FRA 67.900 DKK" badgefaapladser="true" />
+      </div>
 
-    <div class="text-small font-bold mt-sm">
-      <Card cardimage="/public/skydiving.jpg" cardimagealt="skydiving" bynavn="Costa Rica, Mexico & Colombia" pris="FRA 58.900 DKK" badgefaapladser="true" />
-    </div>
+      <div class="text-small font-bold mt-sm">
+        <Card cardimage="/public/hawaii.jpg" cardimagealt="hawaii" bynavn="Australien, New Zealand, Bali & Gili island" pris="FRA 64.900 DKK" badgefaapladser="true" />
+      </div>
 
-    <div class="text-small font-bold mt-sm">
-      <Card cardimage="/public/vandfald.jpg" cardimagealt="vandfald" bynavn="Indien, Nepal,Thailand, Vietnam & Sri Lanka" pris="FRA 61.500 DKK" badgefaapladser="true" />
-    </div>
+      <div class="text-small font-bold mt-sm">
+        <Card cardimage="/public/skydiving.jpg" cardimagealt="skydiving" bynavn="Costa Rica, Mexico & Colombia" pris="FRA 58.900 DKK" badgefaapladser="true" />
+      </div>
 
-    <div class="text-small font-bold mt-sm">
-      <Card cardimage="/public/japan.jpg" cardimagealt="japan" bynavn="Hawaii, Australien, Japan, Bali & Gili islands" pris="FRA 84.500 DKK" badgefaapladser="true" />
-    </div>
+      <div class="text-small font-bold mt-sm">
+        <Card cardimage="/public/vandfald.jpg" cardimagealt="vandfald" bynavn="Indien, Nepal,Thailand, Vietnam & Sri Lanka" pris="FRA 61.500 DKK" badgefaapladser="true" />
+      </div>
 
-    <div class="text-small font-bold mt-sm">
-      <Card cardimage="/public/maldiverne.jpg" cardimagealt="maldiverne" bynavn="Maldiverne, Sri Lanka, Bali & Gili islands" pris="FRA 52.500 DKK" badgefaapladser="true" />
-    </div>
+      <div class="text-small font-bold mt-sm">
+        <Card cardimage="/public/japan.jpg" cardimagealt="japan" bynavn="Hawaii, Australien, Japan, Bali & Gili islands" pris="FRA 84.500 DKK" badgefaapladser="true" />
+      </div>
 
-    <div class="text-small font-bold mt-sm">
-      <Card cardimage="/public/gruppebiledesol.jpg" cardimagealt="solopgang" bynavn="Brasilien, Bolivia, Colombia, Ecuador, Peru & Argentina" pris="FRA 74.900 DKK" badgefaapladser="true" />
-    </div>
-    <div class="text-small font-bold mt-sm">
-      <Card cardimage="/public/Australien .jpg" cardimagealt="3 piger der er på et tog" bynavn="Australien, Japan Bali & Gili Islands" pris="FRA 54.900 DKK" badgefaapladser="true" />
-    </div>
-    <div class="text-small font-bold mt-sm">
-      <Card cardimage="/public/mountainbike.jpg" cardimagealt="3 piger der er på et tog" bynavn="Bali, Lombok & Gili islands" pris="FRA 28.900 DKK" badgefaapladser="true" />
+      <div class="text-small font-bold mt-sm">
+        <Card cardimage="/public/maldiverne.jpg" cardimagealt="maldiverne" bynavn="Maldiverne, Sri Lanka, Bali & Gili islands" pris="FRA 52.500 DKK" badgefaapladser="true" />
+      </div>
+
+      <div class="text-small font-bold mt-sm">
+        <Card cardimage="/public/gruppebiledesol.jpg" cardimagealt="solopgang" bynavn="Brasilien, Bolivia, Colombia, Ecuador, Peru & Argentina" pris="FRA 74.900 DKK" badgefaapladser="true" />
+      </div>
+      <div class="text-small font-bold mt-sm">
+        <Card cardimage="/public/Australien .jpg" cardimagealt="3 piger der er på et tog" bynavn="Australien, Japan Bali & Gili Islands" pris="FRA 54.900 DKK" badgefaapladser="true" />
+      </div>
+      <div class="text-small font-bold mt-sm">
+        <Card cardimage="/public/mountainbike.jpg" cardimagealt="3 piger der er på et tog" bynavn="Bali, Lombok & Gili islands" pris="FRA 28.900 DKK" badgefaapladser="true" />
+      </div>
     </div>
   </section>
 
-  <section class="bg-[#fcefe6] p-6">
+  <section class="bg-[#fcefe6] pt-16 pb-16 p-6 lg:pt-5xl lg:pb-16">
     <div class="grid lg:grid-cols-2">
       <!-- Kolonne 1: Billeder og Video -->
-      <div class="grid grid-cols-2">
+      <div class="pb-m grid grid-cols-2">
         <!-- Venstre side: Billeder -->
         <div class="grid grid-rows-2">
           <img src="solnedgang.jpg" alt="Billede 1" class="rounded-lg w-48 h-48 object-cover" />
@@ -97,7 +111,10 @@ import Hawaii from "./public/hawaii.jpg";
         </div>
 
         <!-- Højre side: Video -->
-        <video class="rounded-lg w-7xl h-30 object-cover" controls src="oplevelsesvideo.webm" alt="Video"></video>
+
+        <video class="rounded-lg w-7xl h-30 object-cover" autoplay muted loop>
+          <source src="oplevelsesvideo.webm" type="Video/webm" />
+        </video>
       </div>
 
       <!-- Kolonne 2: Tekst -->
@@ -111,6 +128,32 @@ import Hawaii from "./public/hawaii.jpg";
           <button class="bg-orange-500 text-white font-bold py-2 px-6 rounded hover:bg-orange-600"> Giv mig besked &rsaquo;</button>
           <button class="bg-orange-500 text-white font-bold py-2 px-6 rounded hover:bg-orange-600"> Tilmeld dig ophold &rsaquo;</button>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-beige-500 pt-16 pb-16 lg:pt-5xl lg:pb-16">
+    <div class="lg:grid lg:grid-cols-2 lg:mx-xl lg:gap-40">
+      <div class="mx-xs">
+        <h2 class="font-bold text-xlarge pb-xs">DELTAG I VORES <br />INFOMØDER!</h2>
+        <p class="pb-xs">Hvis du drømmer om et fantastisk rejseeventyr med masser af adventure, vilde naturoplevelser og spændende kulturmøder så smut forbi et af vores hyggelige infomøder i København eller Aarhus - eller mød os på et online infomøde.</p>
+      </div>
+      <div class="mx-xs pt-xs">
+        <Image src={Cykeltur} alt="billede" class="rounded w-72" />
+      </div>
+    </div>
+  </section>
+  <section class="pt-16 pb-16 lg:pt-5xl lg:pb-16">
+    <Image src={Skoven} alt="billede" />
+  </section>
+  <section class="bg-beige-500 pt-16 pb-16 lg:pt-5xl lg:pb-16">
+    <div class="mx-xs lg:grid lg:grid-cols-2 lg:gap-12 lg:mx-xl">
+      <div>
+        <h3 class="text-orange-900 pb-xs font-bold text-large">HØJSKOLE I UDLANDET FOR UNGE MENNESKER</h3>
+        <p class="pb-20">Drømmer du om et højskoleophold i udlandet? Med HÖJSKOLENDK får du dit livs eventyr med fællesskab, unikke oplevelser og meningsfuld læring. Oplev nye venskaber, spændende kulturer og uforglemmelige øjeblikke, der vil styrke dig som person. Rejs til Bali, Hawaii, Australien eller New York, Tokyo og Rio de Janeiro. Udforsk autentiske møder i Indien og Mexico eller adrenalinfyldte eventyr i New Zealand og Costa Rica. Med danske rejseledere og unge på din egen alder bliver det en rejse, du aldrig glemmer - både ud i verden og ind i dig selv.</p>
+      </div>
+      <div>
+        <h3 class="text-orange-900 pb-xs font-bold text-large">UFORGLEMMELIGT HØJSKOLEOPHOLD I UDLANDET</h3>
+        <p>HØJSKOLENDK tilbyder spændende højskoleophold i udlandet, både i sommerferien og resten af året. Sommerophold varer typisk 5 uger og kombinerer flere lande og kulturer – perfekt for dig, der vil udforske verden, møde andre unge og udvikle dig, inden studier eller job. Årsophold varer 2-3 måneder og er ideelt til sabbatåret, hvor du kan rejse og styrke dig selv personligt. Uanset hvornår du rejser, garanterer vi et uforglemmeligt eventyr med fællesskab og oplevelser for livet!</p>
       </div>
     </div>
   </section>
